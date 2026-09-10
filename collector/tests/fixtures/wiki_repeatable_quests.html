@@ -1,0 +1,2309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The official documentation for the server World of your Dream">
+      
+      
+        <meta name="author" content="the server Team">
+      
+      
+        <link rel="canonical" href="https://example.com/wiki/Repeatable_Quests/">
+      
+      
+        <link rel="prev" href="../Poring_Coins_System/">
+      
+      
+        <link rel="next" href="../Vendor_System/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+    
+    
+      
+        <title>ð Repeatable Quests - the server Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7XD6KF8G73"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7XD6KF8G73",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7XD6KF8G73",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#repeatable-exp-quests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="the server Documentation" class="md-header__button md-logo" aria-label="the server Documentation" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            the server Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ð Repeatable Quests
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="the server Documentation" class="md-nav__button md-logo" aria-label="the server Documentation" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    the server Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Welcome to the server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Server_Info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    â¹ï¸ Server Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Donations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð³ Donations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../All_Patch_Notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð§µ Patch Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.the control panel/?module=service&action=downloads" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Download the server â
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/roserver-the-world-of-your-dream-702960460168953946" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¾ Join us on Discord â
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How_To_Start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    â­ How to start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    âï¸ Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Beginner_Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð± Beginner Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Improvements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¦ QOL Improvements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Guild-Starter-Support-System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Guild Starter Support System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¬ FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Key Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main_Office/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¡ Main Office
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pet_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð± Cute Pet System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hunting_Mission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    âï¸ Hunting Missions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Poring_Coins_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Poring Coin System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ð Repeatable Quests
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ð Repeatable Quests
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#item-turn-in-quests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Item Turn-In Quests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monster-hunting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monster Hunting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vendor_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð° Vendor System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Warper_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Warper System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Enhancements
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Enhancements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¤ Adventurer Inns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Attendance_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Attendance Rewards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Card_Exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ðï¸ Card Exchange
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Class_Changes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð® Class Changes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dealers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¬ Convenient Dealers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom_NPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð§ Custom NPCs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Costume_Converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð­ Costume Converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dimonka_Headgear_Quest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Headgear Quests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hourly_Rewards_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¥ Hourly Rewards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Item_Changes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Item Changes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expanded-Class-Weapons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¦ Expanded Class Weapons
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mercenary_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ðª Mercenary System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Modified_Sales_Prices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Modified Sales Prices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Navigation_System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ðºï¸ Navigation System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remastered_Novice_Location/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð£ Remastered Novice Grounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Dungeons
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Dungeons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Biolab4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð§ª Biolabs 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Endless_Cellar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    â³ Endless Cellar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Horror_Toy_Factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Horror Toy Factory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Old_Glast_Heim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð» Old Glast Heim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Eternal_Bastion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    âï¸ Eternal Bastion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Events & Activites
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Events & Activites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Roulette-System/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð° Roulette System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Comodo-Casino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð² Comodo Casino
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Summer_Event_2026/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    âï¸ Summer Festival 2026
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Spring_Event_2026/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¸ Spring Festival 2026
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Auto_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Auto Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hugel_Mini_Game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð Hugel Mini Games
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WoE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð° War of Emperium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pre_Trans_WoE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð¯ Pre-Trans WoE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../King_of_Emperium_%28KoE%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ð° King of Emperium (KoE)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PvP_Arena/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    âï¸ PvP Arena
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="repeatable-exp-quests">Repeatable EXP Quests<a class="headerlink" href="#repeatable-exp-quests" title="Anchor link to this section">&para;</a></h1>
+<p>Repeatable EXP quests are a reliable way to level up while also collecting useful loot. They come in two forms: <strong>item gathering</strong>, where you turn in monster drops, and <strong>monster hunting</strong>, where you defeat a set number of enemies. Both give Base and Job EXP and can be repeated as often as you like, making them a steady option when regular grinding slows down.  </p>
+<p>Some NPCs offer both quest types. You can accept both, but if they come from the same NPC youâll need to finish or abandon the <strong>Monster Hunting</strong> quest before turning in items.  </p>
+<hr />
+<h2 id="item-turn-in-quests">Item Turn-In Quests<a class="headerlink" href="#item-turn-in-quests" title="Anchor link to this section">&para;</a></h2>
+<p>Item gathering quests ask you to collect <strong>20</strong>, <strong>25</strong>, or <strong>50</strong> of a specific item. Turning them in rewards <strong>Base and Job EXP</strong>, making these quests a steady way to level while farming useful drops.  </p>
+<p>Collected items also hold value beyond quests:<br />
+- They can be <strong>traded or sold</strong> to other players<br />
+- They can be <strong>saved</strong> to boost future characters  </p>
+<p>Because you decide where and how to farm, item quests are flexibleâuse them to earn zeny, prepare turn-ins ahead of time, or gain reliable EXP outside of your usual grinding spots.    </p>
+<h3 id="item-quest-list">Item Quest List<a class="headerlink" href="#item-quest-list" title="Anchor link to this section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">NPC</th>
+<th style="text-align: left;">Location</th>
+<th style="text-align: right;">Min Level</th>
+<th style="text-align: right;">Max Level</th>
+<th style="text-align: left;">Items</th>
+<th style="text-align: right;">Base EXP</th>
+<th style="text-align: right;">Job EXP</th>
+<th style="text-align: right;">Base EXP Per Item</th>
+<th style="text-align: right;">Job EXP Per Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Langry</strong></td>
+<td style="text-align: left;"><code>/navi gef_fild07 321/193</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">25 Fluff</td>
+<td style="text-align: right;">770</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Halgus</strong></td>
+<td style="text-align: left;"><code>/navi gef_fild04 191/54</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">25 Chrysalis</td>
+<td style="text-align: right;">770</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gregor</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild02 74/329</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">25 Bill of Birds</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">160</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Laertes</strong></td>
+<td style="text-align: left;"><code>/navi prt_fild04 356/148</code></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: left;">25 Powder of Butterfly</td>
+<td style="text-align: right;">5,900</td>
+<td style="text-align: right;">2,250</td>
+<td style="text-align: right;">236</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nutters</strong></td>
+<td style="text-align: left;"><code>/navi mjolnir_01 293/20</code></td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">25 Acorn</td>
+<td style="text-align: right;">7,200</td>
+<td style="text-align: right;">7,810</td>
+<td style="text-align: right;">288</td>
+<td style="text-align: right;">312</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Yullo</strong></td>
+<td style="text-align: left;"><code>/navi mjolnir_01 296/29</code></td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">25 Porcupine Quill</td>
+<td style="text-align: right;">20,850</td>
+<td style="text-align: right;">12,544</td>
+<td style="text-align: right;">834</td>
+<td style="text-align: right;">510</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Private Jeremy</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild11 57/138</code></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">25 Stone Heart</td>
+<td style="text-align: right;">28,000</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;">1,120</td>
+<td style="text-align: right;">720</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shone</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild17 208/346</code></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">25 Earthworm Peeling</td>
+<td style="text-align: right;">39,438</td>
+<td style="text-align: right;">28,120</td>
+<td style="text-align: right;">1,577</td>
+<td style="text-align: right;">1,124</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lemly</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild17 66/273</code></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: left;">25 Frill</td>
+<td style="text-align: right;">60,000</td>
+<td style="text-align: right;">46,000</td>
+<td style="text-align: right;">2,400</td>
+<td style="text-align: right;">1,840</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Li</strong></td>
+<td style="text-align: left;"><code>/navi pay_fild10 108/357</code></td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: left;">50 Dokebi Horns</td>
+<td style="text-align: right;">84,000</td>
+<td style="text-align: right;">72,000</td>
+<td style="text-align: right;">1,680</td>
+<td style="text-align: right;">1,440</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lella</strong></td>
+<td style="text-align: left;"><code>/navi ayo_fild01 44/241</code></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: left;">50 Huge Leaf</td>
+<td style="text-align: right;">51,480</td>
+<td style="text-align: right;">63,024</td>
+<td style="text-align: right;">1,029</td>
+<td style="text-align: right;">1,260</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cuir</strong></td>
+<td style="text-align: left;"><code>/navi cmd_fild01 362/256</code></td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: left;">20 Anolian Skin</td>
+<td style="text-align: right;">137,900</td>
+<td style="text-align: right;">86,600</td>
+<td style="text-align: right;">6,895</td>
+<td style="text-align: right;">4,330</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Local Villager</strong></td>
+<td style="text-align: left;"><code>/navi ein_fild01 43/249</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: left;">50 Bacillus</td>
+<td style="text-align: right;">500,532</td>
+<td style="text-align: right;">288,904</td>
+<td style="text-align: right;">10,010</td>
+<td style="text-align: right;">5,778</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lilla</strong></td>
+<td style="text-align: left;"><code>/navi um_fild01 35/281</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: left;">50 Sharp Leaf</td>
+<td style="text-align: right;">524,970</td>
+<td style="text-align: right;">283,670</td>
+<td style="text-align: right;">10,499</td>
+<td style="text-align: right;">5,673</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vegetable Farmer</strong></td>
+<td style="text-align: left;"><code>/navi ein_fild06 82/171</code></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: left;">50 Antelope Horn</td>
+<td style="text-align: right;">516,978</td>
+<td style="text-align: right;">310,310</td>
+<td style="text-align: right;">10,339</td>
+<td style="text-align: right;">6,206</td>
+</tr>
+</tbody>
+</table>
+<h3 id="item-purchase-locations">Item Purchase Locations<a class="headerlink" href="#item-purchase-locations" title="Anchor link to this section">&para;</a></h3>
+<p>Some turn-in items can be bought directly from NPCs. <strong>Antelope Horns</strong> cannot be purchased with the Discount skill and cannot be vended to other players.  </p>
+<ul>
+<li><strong>Bill of Birds</strong> â Morroc Ruins (<code>/navi moc_ruins 81/113</code>, <code>/navi moc_ruins 93/53</code>)  </li>
+<li><strong>Acorn</strong> â Moscovia, Acorn Dealer (<code>/navi moscovia 208/182</code>)  </li>
+<li><strong>Antelope Horn</strong> â Niflheim, Tool Dealer (<code>/navi niflheim 218/197</code>), <strong>Discount Skill does not work on Antelope Horns</strong>. </li>
+</ul>
+<p>The following NPCs offer players a choice of how many monsters they want to hunt, with options of <strong>50</strong>, <strong>100</strong>, or <strong>150</strong>. All three options yield the same EXP per kill, with hunting <strong>100 monsters</strong> rewarding twice as much as hunting <strong>50</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Party members who are within the killer's screen range will share the kill count (the final blow dealer must be visible on screen). If the player accidentally chooses the wrong option, they can abandon the quest and lose all current progress, allowing them to select a different monster hunt size.</p>
+</div>
+<h2 id="monster-hunting">Monster Hunting<a class="headerlink" href="#monster-hunting" title="Anchor link to this section">&para;</a></h2>
+<p>Hunting quests let you choose to defeat <strong>50</strong>, <strong>100</strong>, or <strong>150</strong> monsters for <strong>Base and Job EXP</strong> rewards. A 50-monster hunt can grant up to <strong>1 Base Level</strong> and <strong>1 Job Level</strong>, while 100 and 150 hunts can grant up to <strong>2</strong> and <strong>3 levels</strong>.  </p>
+<p>These quests are especially effective in parties, since everyoneâs kills count toward the total. As long as the killer is visible on screen, nearby party members will share the kill. If you pick the wrong option, you can abandon the quest to reset and choose a different hunt size.  </p>
+<p>Unlike item turn-ins, every kill counts, no drops required. Hunting quests are also a good way to explore new maps and face a wider variety of monsters while keeping steady EXP gains.  </p>
+<p>Please note that <strong>Homunculus kills do not count</strong>, but <strong>Mercenary kills do</strong>. You can also hold the quest, become a <strong>Transcendent</strong>, and then claim the reward once you meet the minimum level requirement.  </p>
+<h3 id="hunting-quest-list">Hunting Quest List<a class="headerlink" href="#hunting-quest-list" title="Anchor link to this section">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The rewards listed are based on a <strong>50-monster</strong> turn-in. To calculate rewards for hunting <strong>100</strong> or <strong>150</strong> monsters, simply double or triple the values.<br />
+Monsters marked with <code>*</code> are on maps that require a quest to access.  </p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">NPC</th>
+<th style="text-align: left;">Location</th>
+<th style="text-align: right;">Min Level</th>
+<th style="text-align: right;">Max Level</th>
+<th style="text-align: left;">Monster</th>
+<th style="text-align: right;">Base EXP</th>
+<th style="text-align: right;">Job EXP</th>
+<th style="text-align: right;">Base EXP Per Monster</th>
+<th style="text-align: right;">Job EXP Per Monster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Langry</strong></td>
+<td style="text-align: left;"><code>/navi gef_fild07 321/193</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Fabre</td>
+<td style="text-align: right;">770</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Halgus</strong></td>
+<td style="text-align: left;"><code>/navi gef_fild04 191/54</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Pupa</td>
+<td style="text-align: right;">770</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gregor</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild02 74/329</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">Peco Peco</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Laertes</strong></td>
+<td style="text-align: left;"><code>/navi prt_fild04 356/148</code></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: left;">Creamy</td>
+<td style="text-align: right;">5,900</td>
+<td style="text-align: right;">2,250</td>
+<td style="text-align: right;">118</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nutters</strong></td>
+<td style="text-align: left;"><code>/navi mjolnir_01 293/20</code></td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">Coco</td>
+<td style="text-align: right;">7,200</td>
+<td style="text-align: right;">7,810</td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">156</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Yullo</strong></td>
+<td style="text-align: left;"><code>/navi mjolnir_01 296/29</code></td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">Caramel</td>
+<td style="text-align: right;">20,850</td>
+<td style="text-align: right;">12,544</td>
+<td style="text-align: right;">417</td>
+<td style="text-align: right;">251</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Private Jeremy</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild11 57/138</code></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">Golem</td>
+<td style="text-align: right;">28,000</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;">560</td>
+<td style="text-align: right;">360</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shone</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild17 208/346</code></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">Hode</td>
+<td style="text-align: right;">31,550</td>
+<td style="text-align: right;">22,500</td>
+<td style="text-align: right;">631</td>
+<td style="text-align: right;">450</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lemly</strong></td>
+<td style="text-align: left;"><code>/navi moc_fild17 66/273</code></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: left;">Frilldora</td>
+<td style="text-align: right;">60,000</td>
+<td style="text-align: right;">46,000</td>
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">900</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Li</strong></td>
+<td style="text-align: left;"><code>/navi pay_fild10 108/357</code></td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: left;">Dokebi</td>
+<td style="text-align: right;">84,000</td>
+<td style="text-align: right;">72,000</td>
+<td style="text-align: right;">1,680</td>
+<td style="text-align: right;">1,440</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lella</strong></td>
+<td style="text-align: left;"><code>/navi ayo_fild01 44/241</code></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: left;">Leaf Cat</td>
+<td style="text-align: right;">51,480</td>
+<td style="text-align: right;">63,024</td>
+<td style="text-align: right;">1,029</td>
+<td style="text-align: right;">1,260</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cuir</strong></td>
+<td style="text-align: left;"><code>/navi cmd_fild01 362/256</code></td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: left;">Alligator</td>
+<td style="text-align: right;">137,900</td>
+<td style="text-align: right;">86,600</td>
+<td style="text-align: right;">6,895</td>
+<td style="text-align: right;">4,330</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gandolf</strong></td>
+<td style="text-align: left;"><code>/navi lhz_dun01 146/287</code></td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: left;">Remover<code>*</code></td>
+<td style="text-align: right;">550,000</td>
+<td style="text-align: right;">340,000</td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">6,800</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Local Villager</strong></td>
+<td style="text-align: left;"><code>/navi ein_fild01 43/249</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: left;">Demon Pungus</td>
+<td style="text-align: right;">500,532</td>
+<td style="text-align: right;">288,904</td>
+<td style="text-align: right;">10,010</td>
+<td style="text-align: right;">5,778</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lilla</strong></td>
+<td style="text-align: left;"><code>/navi um_fild01 35/281</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: left;">Dryad</td>
+<td style="text-align: right;">524,970</td>
+<td style="text-align: right;">283,670</td>
+<td style="text-align: right;">10,499</td>
+<td style="text-align: right;">5,673</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shea</strong></td>
+<td style="text-align: left;"><code>/navi tur_dun03 125/195</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: left;">Assaulter<code>*</code></td>
+<td style="text-align: right;">850,000</td>
+<td style="text-align: right;">550,000</td>
+<td style="text-align: right;">17,000</td>
+<td style="text-align: right;">11,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vegetable Farmer</strong></td>
+<td style="text-align: left;"><code>/navi ein_fild06 82/171</code></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: left;">Goat</td>
+<td style="text-align: right;">1,033,956</td>
+<td style="text-align: right;">620,620</td>
+<td style="text-align: right;">20,680</td>
+<td style="text-align: right;">12,413</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Henry</strong></td>
+<td style="text-align: left;"><code>/navi ice_dun03 140/26</code></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: left;">Ice Titan</td>
+<td style="text-align: right;">3,640,000</td>
+<td style="text-align: right;">2,600,000</td>
+<td style="text-align: right;">72,800</td>
+<td style="text-align: right;">52,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monica</strong></td>
+<td style="text-align: left;"><code>/navi geffen 112/63</code></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: left;">Succubus<code>*</code></td>
+<td style="text-align: right;">5,300,000</td>
+<td style="text-align: right;">3,800,000</td>
+<td style="text-align: right;">106,000</td>
+<td style="text-align: right;">76,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Coal Miner</strong></td>
+<td style="text-align: left;"><code>/navi mag_dun02 46/40</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: left;">Deleter</td>
+<td style="text-align: right;">1,550,936</td>
+<td style="text-align: right;">930,932</td>
+<td style="text-align: right;">31,019</td>
+<td style="text-align: right;">18,619</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Jotun Tribesman</strong></td>
+<td style="text-align: left;"><code>/navi mag_dun01 127/71</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: left;">Lava Golem</td>
+<td style="text-align: right;">1,939,200</td>
+<td style="text-align: right;">1,162,800</td>
+<td style="text-align: right;">38,784</td>
+<td style="text-align: right;">23,256</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Miner</strong></td>
+<td style="text-align: left;"><code>/navi beach_dun 269/71</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: left;">Medusa</td>
+<td style="text-align: right;">2,062,800</td>
+<td style="text-align: right;">1,409,100</td>
+<td style="text-align: right;">41,256</td>
+<td style="text-align: right;">28,182</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ptero</strong></td>
+<td style="text-align: left;"><code>/navi abyss_03 117/31</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: left;">Gold Acidus<code>*</code></td>
+<td style="text-align: right;">2,570,000</td>
+<td style="text-align: right;">1,630,000</td>
+<td style="text-align: right;">51,400</td>
+<td style="text-align: right;">32,600</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Kirby</strong></td>
+<td style="text-align: left;"><code>/navi nyd_dun01 146/154</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: left;">Draco<code>*</code></td>
+<td style="text-align: right;">3,700,000</td>
+<td style="text-align: right;">2,800,000</td>
+<td style="text-align: right;">74,000</td>
+<td style="text-align: right;">56,000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Emmerich</strong></td>
+<td style="text-align: left;"><code>/navi thor_v03 57/245</code></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: left;">Salamander<code>*</code></td>
+<td style="text-align: right;">8,600,000</td>
+<td style="text-align: right;">6,200,000</td>
+<td style="text-align: right;">172,000</td>
+<td style="text-align: right;">124,000</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Poring_Coins_System/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ð Poring Coin System">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ð Poring Coin System
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Vendor_System/" class="md-footer__link md-footer__link--next" aria-label="Next: ð° Vendor System">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                ð° Vendor System
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Â© 2023-2026 World of Your Dream / the server
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/roserver-the-world-of-your-dream-702960460168953946" target="_blank" rel="noopener" title="the server Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485 485 0 0 0 404.081 32.03a1.82 1.82 0 0 0-1.923.91 338 338 0 0 0-14.9 30.6 447.9 447.9 0 0 0-134.426 0 310 310 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.7 483.7 0 0 0-119.688 37.107 1.7 1.7 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.02 2.02 0 0 0 .765 1.375 487.7 487.7 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348 348 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321 321 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251 251 0 0 0 9.109-7.137 1.82 1.82 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.81 1.81 0 0 1 1.924.233 235 235 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.4 301.4 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391 391 0 0 0 30.014 48.815 1.86 1.86 0 0 0 2.063.7A486 486 0 0 0 610.7 405.729a1.88 1.88 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541M222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241m195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.example.com/" target="_blank" rel="noopener" title="the server Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.4c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.3c2.2 20.4 3.3 41.8 3.3 64m28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64m112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7m-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6M8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64m186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.the control panel/?module=service&action=downloads" target="_blank" rel="noopener" title="Download the server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.expand", "navigation.footer", "toc.integrate", "search.suggest", "search.highlight", "content.tabs", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5090c770.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

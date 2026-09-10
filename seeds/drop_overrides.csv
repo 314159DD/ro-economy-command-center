@@ -1,0 +1,5 @@
+# CP monster DB shows pre-nerf rates for some drops; the the server documentation
+# site lists server-side corrections. multiplier applies to the CP rate.
+# Source every row in the note column.
+monster_id,item_id,multiplier,note
+1386,997,0.25,"the server docs: Sleepers drop Great Natures nerfed by 75%"

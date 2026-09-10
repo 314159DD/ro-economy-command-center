@@ -1,0 +1,3 @@
+# weekday: 0=Sunday..6=Saturday (JS getUTCDay convention); times are UTC = server time
+weekday,start_hh,start_mm,duration_min
+6,16,0,60

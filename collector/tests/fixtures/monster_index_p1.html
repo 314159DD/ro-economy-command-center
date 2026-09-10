@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WRN7XM9Q');</script>
+<!-- End Google Tag Manager -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<title>RO Control Panel: List Monsters</title>
+        <link rel="icon" type="image/x-icon" href="cp/favicon.ico" />
+		<link rel="stylesheet" href="/cp/themes/default/css/flux.css" type="text/css" media="screen" title="" charset="utf-8" />
+		<link href="/cp/themes/default/css/flux/unitip.css" rel="stylesheet" type="text/css" media="screen" title="" charset="utf-8" />
+				<link href="/cp/themes/default/css/flux/recaptcha.css" rel="stylesheet" type="text/css" media="screen" title="" charset="utf-8" />
+				<!--[if IE]>
+		<link rel="stylesheet" href="/cp/themes/default/css/flux/ie.css" type="text/css" media="screen" title="" charset="utf-8" />
+		<![endif]-->	
+		<!--[if lt IE 9]>
+		<script src="/cp/themes/default/js/ie9.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/cp/themes/default/js/flux.unitpngfix.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="/cp/themes/default/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="/cp/themes/default/js/flux.datefields.js"></script>
+		<script type="text/javascript" src="/cp/themes/default/js/flux.unitip.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var inputs = 'input[type=text],input[type=password],input[type=file]';
+				$(inputs).focus(function(){
+					$(this).css({
+						'background-color': '#f9f5e7',
+						'border-color': '#dcd7c7',
+						'color': '#726c58'
+					});
+				});
+				$(inputs).blur(function(){
+					$(this).css({
+						'backgroundColor': '#ffffff',
+						'borderColor': '#dddddd',
+						'color': '#444444'
+					}, 500);
+				});
+				$('.menuitem a').hover(
+					function(){
+						$(this).fadeTo(200, 0.85);
+						$(this).css('cursor', 'pointer');
+					},
+					function(){
+						$(this).fadeTo(150, 1.00);
+						$(this).css('cursor', 'normal');
+					}
+				);
+				$('.money-input').keyup(function() {
+					var creditValue = parseInt($(this).val() / 0.1, 10);
+					if (isNaN(creditValue))
+						$('.credit-input').val('?');
+					else
+						$('.credit-input').val(creditValue);
+				}).keyup();
+				$('.credit-input').keyup(function() {
+					var moneyValue = parseFloat($(this).val() * 0.1);
+					if (isNaN(moneyValue))
+						$('.money-input').val('?');
+					else
+						$('.money-input').val(moneyValue.toFixed(2));
+				}).keyup();
+				
+				// In: js/flux.datefields.js
+				processDateFields();
+			});
+			
+			function reload(){
+				window.location.href = '/cp/?module=monster';
+			}
+		</script>
+		
+		<script type="text/javascript">
+			function updatePreferredServer(sel){
+				var preferred = sel.options[sel.selectedIndex].value;
+				document.preferred_server_form.preferred_server.value = preferred;
+				document.preferred_server_form.submit();
+			}
+			
+			function updatePreferredTheme(sel){
+				var preferred = sel.options[sel.selectedIndex].value;
+				document.preferred_theme_form.preferred_theme.value = preferred;
+				document.preferred_theme_form.submit();
+			}
+
+            function updatePreferredLanguage(sel){
+                var preferred = sel.options[sel.selectedIndex].value;
+                setCookie('language', preferred);
+                reload();
+            }
+
+			// Preload spinner image.
+			var spinner = new Image();
+			spinner.src = '/cp/themes/default/img/spinner.gif';
+			
+			function refreshSecurityCode(imgSelector){
+				$(imgSelector).attr('src', spinner.src);
+				
+				// Load image, spinner will be active until loading is complete.
+				var clean = false;
+				var image = new Image();
+				image.src = "/cp/?module=captcha"+(clean ? '?nocache=' : '&nocache=')+Math.random();
+				
+				$(imgSelector).attr('src', image.src);
+			}
+			function toggleSearchForm()
+			{
+				//$('.search-form').toggle();
+				$('.search-form').slideToggle('fast');
+			}
+
+            function setCookie(key, value) {
+                var expires = new Date();
+                expires.setTime(expires.getTime() + expires.getTime()); // never expires
+                document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+            }
+		</script>
+		
+					<script src='https://www.google.com/recaptcha/api.js'></script>
+				
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="0" width="100%">
+			<tr>
+				<!-- Header -->
+				<td bgcolor="#FFFFFF" width="20"></td>
+				<td bgcolor="#FFFFFF" class="header-style" colspan="3">
+					<a href="https://www.example.com">
+						<img src="/cp/themes/default/img/roserver-logo-cp.webp" id="logo" />
+					</a>
+				</td>
+				<td bgcolor="#FFFFFF" width="20"></td>
+			</tr>
+			<tr>
+				<!-- Spacing between header and content -->
+				<td colspan="3" height="20"></td>
+			</tr>
+			<tr>
+				<td style="padding: 10px"></td>
+				<td width="198">
+					<!-- Sidebar -->
+					
+
+<table id="sidebar">
+	<tr>
+		<td><img src="/cp/themes/default/img/sidebar_complete_top.gif" /></td>
+	</tr>
+			<tr>
+<th class="menuitem"><strong>Account</strong></th>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=account&action=view">
+				<span>My Account</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=service&action=downloads">
+				<span>Downloads</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="https://discord.gg/5wusMPf9XA">
+				<span> Discord</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=account&action=logout" onclick="return confirm('Are you sure you want to logout?')">
+				<span>Logout</span>
+			</a>
+		</td>
+	</tr>
+					<tr>
+<th class="menuitem"><strong>Donations</strong></th>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="https://example.com/cp/?module=donate">
+				<span>Donate</span>
+			</a>
+		</td>
+	</tr>
+					<tr>
+<th class="menuitem"><strong>Information</strong></th>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=server&action=status">
+				<span>Server Status</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=woe">
+				<span>WOE Hours</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=character&action=online">
+				<span>Who&#039;s Online</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=ranking&action=guild">
+				<span>Ranking Info</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=merchant&action=vendors">
+				<span>Merchant List</span>
+			</a>
+		</td>
+	</tr>
+					<tr>
+<th class="menuitem"><strong>Database</strong></th>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=item">
+				<span>Item Database</span>
+			</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="menuitem">
+			<a href="/cp/?module=monster">
+				<span>Mob Database</span>
+			</a>
+		</td>
+	</tr>
+								<tr>
+		<td><img src="/cp/themes/default/img/sidebar_complete_bottom.gif" /></td>
+	</tr>
+</table>
+				</td>
+				<!-- Spacing between sidebar and content -->
+				<td style="padding: 10px"></td>
+				<td width="100%">
+					<!-- Login box / User information -->
+					<table cellspacing="0" cellpadding="0" width="100%" id="loginbox">
+	<tr>
+		<td width="18"><img src="/cp/themes/default/img/loginbox_tl.gif" style="display: block" /></td>
+		<td bgcolor="#e1eaf3"></td>
+		<td width="18"><img src="/cp/themes/default/img/loginbox_tr.gif" style="display: block" /></td>
+	</tr>
+	<tr>
+		<td bgcolor="#e1eaf3"></td>
+		<td bgcolor="#e1eaf3" valign="middle">
+			<span style="display: inline-block; margin: 2px 2px 2px 0">
+				You are currently logged in as <strong><a href="/cp/?module=account&action=view" title="View account">tekkonsells</a></strong>
+				on RoServer.
+				
+						<form action="/cp/?module=monster&p=1" method="post" name="preferred_server_form" style="display: none">
+				<input type="hidden" name="preferred_server" value="" />
+			</form>
+			</span>
+		</td>
+		<td bgcolor="#e1eaf3"></td>
+	</tr>
+		<tr>
+		<td><img src="/cp/themes/default/img/loginbox_bl.gif" style="display: block" /></td>
+		<td bgcolor="#e1eaf3"></td>
+		<td><img src="/cp/themes/default/img/loginbox_br.gif" style="display: block" /></td>
+	</tr>
+</table>
+					
+					<!-- Content -->
+					<table cellspacing="0" cellpadding="0" width="100%" id="content">
+						<tr>
+							<td width="18"><img src="/cp/themes/default/img/content_tl.gif" style="display: block"  /></td>
+							<td bgcolor="#f5f5f5"></td>
+							<td width="18"><img src="/cp/themes/default/img/content_tr.gif" style="display: block" /></td>
+						</tr>
+						
+						<tr>
+							<td bgcolor="#f5f5f5"></td>
+							<td bgcolor="#f5f5f5">
+																
+								<!-- Messages -->
+																
+								<!-- Sub menu -->
+																
+								<!-- Page menu -->
+																
+								<!-- Credit balance -->
+								<h2>Monsters</h2>
+<p class="toggler"><a href="javascript:toggleSearchForm()">Search...</a></p>
+<form class="search-form" method="get">
+	<input type="hidden" name="module" value="monster" />
+<input type="hidden" name="action" value="index" />	<p>
+		<label for="monster_id">Monster ID:</label>
+		<input type="text" name="monster_id" id="monster_id" value="" />
+		...
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name" value="" />
+		...
+		<label for="mvp">MVP:</label>
+		<select name="mvp" id="mvp">
+			<option value="all" selected="selected">All</option>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		...
+		<input type="submit" value="Search" />
+		<input type="button" value="Reset" onclick="reload()" />
+	</p>
+</form>
+<p class="info-text">Found a total of 1007 record(s) across 51 page(s).  Displaying result(s) 1-20.</p><table class="horizontal-table" style="text-align: center">
+	<tr>
+		<th><a href="/cp/?module=monster&p=1&mob_id_order=asc" class="sortable">Monster ID</a></th>
+		<th colspan="2"><a href="/cp/?module=monster&p=1&name_order=asc" class="sortable">Name</a></th>
+		<th><a href="/cp/?module=monster&p=1&level_order=asc" class="sortable">Level</a></th>
+		<th><a href="/cp/?module=monster&p=1&hp_order=asc" class="sortable">HP</a></th>
+		<th><a href="/cp/?module=monster&p=1&size_order=asc" class="sortable">Size</a></th>
+		<th><a href="/cp/?module=monster&p=1&race_order=asc" class="sortable">Race</a></th>
+		<th>Element</th>
+		<th><a href="/cp/?module=monster&p=1&base_exp_order=asc" class="sortable">Base EXP</a></th>
+		<th><a href="/cp/?module=monster&p=1&job_exp_order=asc" class="sortable">Job EXP</a></th>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1001" class="link-to-monster">1001</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1001.gif?nocache=1828133533" /></td>
+			<td>
+									Scorpion							</td>
+				<td>24</td>
+		<td>1,109</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Fire (Lv 1)</td>
+		<td>1,435</td>
+		<td>880</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1002" class="link-to-monster">1002</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1002.gif?nocache=1697608329" /></td>
+			<td>
+									Poring							</td>
+				<td>1</td>
+		<td>50</td>
+		<td>
+							Small					</td>
+		<td>
+							Plant					</td>
+		<td>Water (Lv 1)</td>
+		<td>10</td>
+		<td>5</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1004" class="link-to-monster">1004</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1004.gif?nocache=1442155343" /></td>
+			<td>
+									Hornet							</td>
+				<td>8</td>
+		<td>169</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Wind (Lv 1)</td>
+		<td>95</td>
+		<td>75</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1005" class="link-to-monster">1005</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1005.gif?nocache=1345609173" /></td>
+			<td>
+									Familiar							</td>
+				<td>8</td>
+		<td>155</td>
+		<td>
+							Medium					</td>
+		<td>
+							Brute					</td>
+		<td>Dark (Lv 1)</td>
+		<td>140</td>
+		<td>75</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1007" class="link-to-monster">1007</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1007.gif?nocache=35932552" /></td>
+			<td>
+									Fabre							</td>
+				<td>2</td>
+		<td>63</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Earth (Lv 1)</td>
+		<td>15</td>
+		<td>10</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1008" class="link-to-monster">1008</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1008.gif?nocache=211251732" /></td>
+			<td>
+									Pupa							</td>
+				<td>2</td>
+		<td>427</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Earth (Lv 1)</td>
+		<td>10</td>
+		<td>20</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1009" class="link-to-monster">1009</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1009.gif?nocache=761435040" /></td>
+			<td>
+									Condor							</td>
+				<td>5</td>
+		<td>92</td>
+		<td>
+							Small					</td>
+		<td>
+							Brute					</td>
+		<td>Wind (Lv 1)</td>
+		<td>30</td>
+		<td>25</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1010" class="link-to-monster">1010</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1010.gif?nocache=204427172" /></td>
+			<td>
+									Willow							</td>
+				<td>4</td>
+		<td>95</td>
+		<td>
+							Small					</td>
+		<td>
+							Plant					</td>
+		<td>Earth (Lv 1)</td>
+		<td>25</td>
+		<td>20</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1011" class="link-to-monster">1011</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1011.gif?nocache=858006817" /></td>
+			<td>
+									Chonchon							</td>
+				<td>4</td>
+		<td>67</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Wind (Lv 1)</td>
+		<td>25</td>
+		<td>20</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1012" class="link-to-monster">1012</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1012.gif?nocache=1567801511" /></td>
+			<td>
+									Roda Frog							</td>
+				<td>5</td>
+		<td>133</td>
+		<td>
+							Small					</td>
+		<td>
+							Fish					</td>
+		<td>Water (Lv 1)</td>
+		<td>30</td>
+		<td>25</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1013" class="link-to-monster">1013</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1013.gif?nocache=1135788934" /></td>
+			<td>
+									Wolf							</td>
+				<td>25</td>
+		<td>919</td>
+		<td>
+							Small					</td>
+		<td>
+							Brute					</td>
+		<td>Earth (Lv 1)</td>
+		<td>1,645</td>
+		<td>995</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1014" class="link-to-monster">1014</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1014.gif?nocache=727619302" /></td>
+			<td>
+									Spore							</td>
+				<td>16</td>
+		<td>510</td>
+		<td>
+							Small					</td>
+		<td>
+							Plant					</td>
+		<td>Water (Lv 1)</td>
+		<td>330</td>
+		<td>540</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1015" class="link-to-monster">1015</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1015.gif?nocache=2034088703" /></td>
+			<td>
+									Zombie							</td>
+				<td>15</td>
+		<td>534</td>
+		<td>
+							Small					</td>
+		<td>
+							Undead					</td>
+		<td>Undead (Lv 1)</td>
+		<td>250</td>
+		<td>165</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1016" class="link-to-monster">1016</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1016.gif?nocache=1805667153" /></td>
+			<td>
+									Archer Skeleton							</td>
+				<td>31</td>
+		<td>3,040</td>
+		<td>
+							Small					</td>
+		<td>
+							Undead					</td>
+		<td>Undead (Lv 1)</td>
+		<td>2,415</td>
+		<td>1,415</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1018" class="link-to-monster">1018</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1018.gif?nocache=1992486396" /></td>
+			<td>
+									Creamy							</td>
+				<td>16</td>
+		<td>595</td>
+		<td>
+							Medium					</td>
+		<td>
+							Insect					</td>
+		<td>Wind (Lv 1)</td>
+		<td>525</td>
+		<td>350</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1019" class="link-to-monster">1019</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1019.gif?nocache=208245292" /></td>
+			<td>
+									Peco Peco							</td>
+				<td>19</td>
+		<td>531</td>
+		<td>
+							Large					</td>
+		<td>
+							Brute					</td>
+		<td>Fire (Lv 1)</td>
+		<td>795</td>
+		<td>360</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1020" class="link-to-monster">1020</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1020.gif?nocache=341059166" /></td>
+			<td>
+									Mandragora							</td>
+				<td>12</td>
+		<td>405</td>
+		<td>
+							Small					</td>
+		<td>
+							Plant					</td>
+		<td>Earth (Lv 3)</td>
+		<td>225</td>
+		<td>160</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1023" class="link-to-monster">1023</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1023.gif?nocache=1633713806" /></td>
+			<td>
+									Orc Warrior							</td>
+				<td>24</td>
+		<td>1,400</td>
+		<td>
+							Small					</td>
+		<td>
+							Demi-Human					</td>
+		<td>Earth (Lv 1)</td>
+		<td>2,040</td>
+		<td>800</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1024" class="link-to-monster">1024</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1024.gif?nocache=1155565299" /></td>
+			<td>
+									Wormtail							</td>
+				<td>14</td>
+		<td>426</td>
+		<td>
+							Small					</td>
+		<td>
+							Plant					</td>
+		<td>Earth (Lv 1)</td>
+		<td>295</td>
+		<td>200</td>
+	</tr>
+		<tr>
+		<td style="text-align: right;">
+							<a href="/cp/?module=monster&action=view&id=1025" class="link-to-monster">1025</a>					</td>
+					<td width="24"><img src="/cp/data/monsters/1025.gif?nocache=1513803388" /></td>
+			<td>
+									Boa							</td>
+				<td>15</td>
+		<td>471</td>
+		<td>
+							Small					</td>
+		<td>
+							Brute					</td>
+		<td>Earth (Lv 1)</td>
+		<td>360</td>
+		<td>240</td>
+	</tr>
+	</table>
+<div class="pages"><a title="Page #1" class="page-num current-page">1</a> | <a href="/cp/?module=monster&p=2" title="Page #2" class="page-num">2</a> | <a href="/cp/?module=monster&p=3" title="Page #3" class="page-num">3</a> | <a href="/cp/?module=monster&p=4" title="Page #4" class="page-num">4</a> | <a href="/cp/?module=monster&p=5" title="Page #5" class="page-num">5</a> | <a href="/cp/?module=monster&p=6" title="Page #6" class="page-num">6</a> | <a href="/cp/?module=monster&p=7" title="Page #7" class="page-num">7</a> | <a href="/cp/?module=monster&p=8" title="Page #8" class="page-num">8</a> | <a href="/cp/?module=monster&p=9" title="Page #9" class="page-num">9</a> | <a href="/cp/?module=monster&p=10" title="Page #10" class="page-num">10</a> |  <a href="/cp/?module=monster&p=11" title="Next Pane (p#11)" class="page-next">Next</a></div>
+<div class="jump-to-page"><label>Page Jump: <input type="text" name="jump_to_page" id="jump_to_page" size="4" onkeypress="if (event.keyCode == 13) { location.href='/cp/?module=monster&p='+this.value+'' }" /></label></div>							</td>
+							<td style="background-color: #f5f5f5;"></td>
+						</tr>
+
+						<tr>
+							<td><img src="/cp/themes/default/img/content_bl.gif" style="display: block" /></td>
+							<td style="background-color: #f5f5f5;"></td>
+							<td><img src="/cp/themes/default/img/content_br.gif" style="display: block" /></td>
+						</tr>
+					</table>
+				</td>
+				<!-- Spacing between content and horizontal end-of-page -->
+				<td style="padding: 10px"></td>
+			</tr>
+						<tr>
+				<td colspan="3"></td>
+				<td id="copyright">
+					<p><strong>© 2023-2025 World of your Dream.</strong></p>
+				</td>
+				<td></td>
+			</tr>
+											</table>
+	</body>
+</html>

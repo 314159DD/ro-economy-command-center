@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+collector/.env
+collector/.ro-profile/
+.pytest_cache/
+collector/market_report.html
+collector/.icon-cache/
